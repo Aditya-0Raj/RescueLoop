@@ -1,0 +1,2 @@
+import { Upload } from 'lucide-react';
+export default function FoodImageUpload() { return <label className="flex cursor-pointer flex-col items-center justify-center rounded-xl border border-dashed border-line bg-stone-50 px-6 py-10 text-center hover:bg-stone-100"><Upload className="text-slate-400" /><p className="mt-3 text-sm font-semibold">Upload food image</p><p className="mt-1 text-xs text-slate-400">Optional · JPG or PNG</p><input type="file" accept="image/*" className="hidden" /></label>; }

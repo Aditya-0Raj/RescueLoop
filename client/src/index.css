@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #1D2822;
+  --color-forest: #17372F;
+  --color-forest-dark: #0F2E27;
+  --color-sage: #6B796F;
+  --color-mint: #EAF1E8;
+  --color-terracotta: #BD7041;
+  --color-line: #DED5C8;
+  --color-cream: #F2EDE4;
+  --color-slate: #69736D;
+  --shadow-soft: 0 16px 40px rgba(23,55,47,.08);
+  --shadow-card: 0 8px 24px rgba(39,54,46,.045);
+}
+
+:root {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #1D2822;
+  background: #F2EDE4;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; min-width: 320px; background: #F2EDE4; color: #1D2822; }
+button, input, select, textarea { font: inherit; }
+button { cursor: pointer; }
+a { color: inherit; text-decoration: none; }
+
+@layer components {
+  .page-shell { min-height: 100vh; background: #F2EDE4; color: #1D2822; }
+  .surface { border: 1px solid #DED5C8; background: #fff; border-radius: 18px; box-shadow: var(--shadow-card); }
+  .card { border: 1px solid #DED5C8; background: #fff; border-radius: 18px; box-shadow: var(--shadow-card); }
+  .eyebrow { font-size: 10px; font-weight: 800; letter-spacing: .2em; text-transform: uppercase; color: rgba(225,242,230,.55); }
+  .eyebrow.dark { color: #68766E; }
+  .page-title { font-size: clamp(24px, 2vw, 32px); font-weight: 700; line-height: 1.04; letter-spacing: -.03em; }
+  .muted { font-size: 14px; color: #69736D; }
+  .field { width: 100%; border: 1px solid #DED5C8; border-radius: 12px; background: #fff; padding: 10px 12px; font-size: 14px; outline: none; transition: .2s; }
+  .field:focus { border-color: #17372F; box-shadow: 0 0 0 3px rgba(23,55,47,.08); }
+  .dashboard-grid { background-image: radial-gradient(circle at 1px 1px, rgba(23,55,47,.035) 1px, transparent 0); background-size: 22px 22px; }
+  .live-dot { display: inline-block; width: 7px; height: 7px; border-radius: 999px; background: #A5C38E; box-shadow: 0 0 0 4px rgba(165,195,142,.12); animation: pulseDot 2s ease-out infinite; }
+  .live-dot.dark { background: #17372F; box-shadow: 0 0 0 4px rgba(23,55,47,.08); }
+  .story-frame { isolation: isolate; }
+  .route-line { position: relative; margin-left: 19px; height: 18px; border-left: 1px dashed rgba(229,244,230,.25); }
+  .route-line span { position: absolute; left: -3px; top: 7px; width: 5px; height: 5px; border-radius: 999px; background: #DFA26F; }
+}
+
+@keyframes pulseDot { 0%, 100% { opacity: .75; transform: scale(1); } 50% { opacity: 1; transform: scale(1.25); } }

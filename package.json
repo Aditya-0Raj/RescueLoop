@@ -1,0 +1,13 @@
+{
+  "name": "rescueloop",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "install:all": "npm --prefix client install && npm --prefix backend install",
+    "dev:client": "npm --prefix client run dev",
+    "dev:backend": "npm --prefix backend run dev",
+    "build:client": "npm --prefix client run build",
+    "lint:client": "npm --prefix client run lint",
+    "check:backend": "npm --prefix backend run check"
+  }
+}

@@ -1,0 +1,1 @@
+export default function RecipientStatus({ accepting }) { return <span className={`inline-flex rounded-full px-2.5 py-1 text-xs font-semibold ${accepting ? 'bg-emerald-50 text-emerald-700' : 'bg-stone-100 text-slate-500'}`}>{accepting ? 'Accepting donations' : 'Not accepting'}</span>; }

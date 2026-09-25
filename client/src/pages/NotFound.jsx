@@ -1,0 +1,2 @@
+import { Link } from 'react-router-dom';
+export default function NotFound() { return <div className="flex min-h-screen items-center justify-center bg-cream p-6"><div className="text-center"><p className="eyebrow">404</p><h1 className="mt-2 text-4xl font-semibold">Page not found</h1><p className="mt-3 text-sm text-slate-500">The RescueLoop route you're looking for doesn't exist.</p><Link to="/" className="mt-6 inline-block rounded-lg bg-forest px-5 py-3 text-sm font-semibold text-white">Back to home</Link></div></div>; }
